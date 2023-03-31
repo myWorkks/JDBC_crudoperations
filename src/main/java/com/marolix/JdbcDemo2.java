@@ -64,7 +64,7 @@ public class JdbcDemo2 {
 }
 	public static void insertValues(Student s) {
 		try {
-			Statement st=	createStatement();
+			Statement st=	JdbcDemo2. createStatement();
 			String s2 = "insert into student values(" + s.getRollno() + ",\"" + s.getName() + "\"," + s.getClass_std()
 					+ ");";
 
@@ -206,7 +206,7 @@ public class JdbcDemo2 {
 			System.out.println(s);
 			int i = st.executeUpdate(s);
 
-			if (i == 0) {
+			if (i >= 0) {
 				System.out.println("deleted successfully ");
 			} else
 				System.out.println("couldnot delete details");
@@ -219,7 +219,7 @@ public class JdbcDemo2 {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -236,12 +236,12 @@ public class JdbcDemo2 {
 			e.printStackTrace();
 		}
 		Student s = new Student(4, "satya", 16);
-		// JdbcDemo2.insertValues(s);
-		// JdbcDemo2.readAllValues();
+		 //JdbcDemo2.insertValues(s);
+		 //JdbcDemo2.readAllValues();
 
-		// JdbcDemo2.readOneValue(30);
-		// JdbcDemo2.updatingExistingRecord(10, 25);
-		// JdbcDemo2.deleteExistingRecord(2);
+		// JdbcDemo2.readOneValue(4);
+		// JdbcDemo2.updatingExistingRecord(1, 25);
+		// JdbcDemo2.deleteExistingRecord(1);
 		JdbcDemo2.deleteAllRecords();
 
 		// crud opertions

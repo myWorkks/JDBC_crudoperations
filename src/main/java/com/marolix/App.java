@@ -21,12 +21,9 @@ public class App {
 		Statement statement = connection.createStatement();
 		// requesting the required thing
 		String name1 = "prathu";
-		ResultSet rs = statement.executeQuery("select distinct * from student where name =\"prathu\";");
+		ResultSet rs = statement.executeQuery("select distinct * from student where std_name =\"prathu\";");
 //will fetch result
-//for (Method method : a) {
-//	System.out.println(method);
 
-//}
 		while (rs.next()) {
 			System.out.println(rs.getInt(1) + rs.getString(2));
 		}

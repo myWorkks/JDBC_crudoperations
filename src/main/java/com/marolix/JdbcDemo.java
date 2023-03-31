@@ -21,7 +21,7 @@ public class JdbcDemo {
 			// execute
 			// boolean ss = st.execute("drop table student;");
 			// System.out.println(ss);
-			// int i = st.executeUpdate("insert into student values(1,\"bharath\",1)");
+			 int i = st.executeUpdate("insert into student values(1,\"bharath\",1)");
 //			int i= st.executeUpdate("update student set class=14 where std_rollno=1;");
 			// System.out.println(i);
 
